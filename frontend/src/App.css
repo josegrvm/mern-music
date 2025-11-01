@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f2f2f7;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  margin-top: 20px;
+  align-items: center;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===========================
+    HEADER
+=========================== */
+
+header {
+  width: 100%;
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav a {
+  margin-left: 1.5rem;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #ff6b81;
+}
+
+/* ===========================
+    CONTAINERS
+=========================== */
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* ===========================
+    BOTONES
+=========================== */
+
+button {
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e1e2f;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-items: center;
+  
+}
+
+button:hover {
+  background-color: red;
+}
+
+button.add-btn {
+  background-color: #4caf50;
+}
+
+button.add-btn:hover {
+  background-color: #45a049;
+}
+
+/* ===========================
+    FORMULARIOS
+=========================== */
+
+form {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+    align-content: center;
+  align-items: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+form input[type="text"],
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* ===========================
+    LISTAS DE CANCIONES / PLAYLISTS
+=========================== */
+
+.song-list,
+.playlist-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.song-card,
+.playlist-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.song-card h3,
+.playlist-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.song-card p,
+.playlist-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+    CHECKBOX LABELS
+=========================== */
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+    DETALLES / SECCIONES
+=========================== */
+
+.detail-section {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.detail-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* ===========================
+    RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  .song-list,
+  .playlist-list {
+    grid-template-columns: 1fr;
+  }
+}
